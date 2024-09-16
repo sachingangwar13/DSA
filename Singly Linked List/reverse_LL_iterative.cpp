@@ -44,15 +44,15 @@ Node *convert2ll(vector<int> &arr){
 int i = 0;
 Node *reverseLL(Node *head){
 
-    Node *temp = head;
+    Node *curr = head;
     Node * prev = NULL;
 
-    while(temp != NULL){
+    while(curr != NULL){
 
-        Node *front = temp -> next;
-        temp -> next= prev;
-        prev=temp;
-        temp = front;
+        Node *temp = curr -> next;
+        curr -> next= prev;
+        prev = curr;
+        curr = temp;
     }
     return prev;
 
