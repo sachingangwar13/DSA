@@ -7,7 +7,7 @@ using namespace std;
         vector<int> ans(n);
         for(int i =n-1 ; i>=0 ; i--){
             
-            while(!st.empty() && st.top()>= arr[i]){
+            while(!st.empty() && arr[st.top()]>= arr[i]){
                 st.pop();
             }
             
@@ -16,7 +16,7 @@ using namespace std;
             else{
                 ans[i]=-1;
             }
-            st.push(arr[i]);
+            st.push(i);
         }
         return ans;
     } 
